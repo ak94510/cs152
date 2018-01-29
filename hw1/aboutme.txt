@@ -1,0 +1,9 @@
+Your name: Addison Kauzer
+Your student ID: 010286913
+Your major: Computer Science
+Your preferred email address: ak94510@gmail.com
+Check one: [x] Undergraduate, [ ] Graduate, [ ] Open university 
+Repeating the class? [ ] Yes, [x] No
+Semester, instructor, and grade of your CS151 prerequisite: Fall 2017, vidya rangasayee, A
+Time it took you to answer the question below: 1 second
+Did you ask anyone for help? [x] Yes, [ ] No
