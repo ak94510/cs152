@@ -1,3 +1,4 @@
+import java.util.List;
 import java.util.ArrayList;
 
 public class Op<T> implements Expr<T> {
@@ -11,8 +12,9 @@ public class Op<T> implements Expr<T> {
         this.fun = fun;
         this.args = args;
     }
+    @Override
     public T value(){
-        ArrayList<T> list = new ArrayList<>();
+        List<T> list = new ArrayList<>();
         for( Expr<T> x : args){
             list.add(x.value());
         }

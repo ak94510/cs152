@@ -1,10 +1,11 @@
-public class Const<T> implements Expr<T> {
-    private T value;
+public class Const<T> implements Expr<T>
+{
+   private T value;
+   
+   public Const(T value)
+   {
+      this.value = value;
+   }
 
-    public Const(T Value)
-    {
-        this.value = value;
-    }
-
-    public T value() {return value;}
+   public T value() { return value; }
 }
