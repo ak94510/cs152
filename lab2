@@ -13,7 +13,7 @@ Step2:
     
      lst.head + concat(lst.tail)
 2. SanJoseStateUniversity
-3.def concat (lst: List[String]) : String = if (lst..tail.isEmpty)
+3.def concat (lst: List[String]) : String = if (lst.tail.isEmpty)
  
     lst.head else
     
