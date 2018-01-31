@@ -1,0 +1,22 @@
+Driver Eric Scaramuzzo, Scribe Addison Kauzer
+Step1:
+1. List[Int]
+2.List[Any]
+3. Thrown error "Cannot resolve symbol ::" Because there is no tail Nil
+4.val lst = List("Ho","Chi","Minh","City")
+"Ho" :: "Chi" :: "Minh" :: "City" :: Nil
+
+Step2:
+1.def concat (lst: List[String]) : String = if (lst.isEmpty)
+ 
+    "" else
+    
+     lst.head + concat(lst.tail)
+2. SanJoseStateUniversity
+3.def concat (lst: List[String]) : String = if (lst..tail.isEmpty)
+ 
+    lst.head else
+    
+     lst.head + " " + concat(lst.tail)
+
+Step 3:
