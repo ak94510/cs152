@@ -1,0 +1,10 @@
+1. subs creates two paths to build off of at each recursion. Then each of those paths branch off to more possible
+combinations of characters.It terminates because the index is incremented with each call until it equals the length.
+It gives the right answer because it covers all possible combinations of of the characters.
+2.lcs comapres each letter of a to each letter of b. If they match, then it count how many concecutive letters match
+after the match. The longest string of concecutive matches is the lcs. It terminates because it reaches the end of
+a string. It gives the right answer because it tests all comparisons of a and b
+3.onebits takes a number and recusivly devides it by 2. Any time it has a remainder of 1, it adds the counter to
+the list and then incremtents the counter. The recursion converges because any number continuously divided by 2 will
+reach 1 and a Integer 1 divided by 2 equels zero which closes the recursion. This works because the counter keeps
+track of the positions of the 1's in the binary equivilent.
