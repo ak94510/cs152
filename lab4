@@ -1,0 +1,17 @@
+Step1
+lst.filter(_.length <= 5)
+lst.sortWith(_.length<_.length)
+lst.reduce((x,y) => { if (s.length > y.length) x else y})
+
+Step2
+def makeMIn(c1: (String,String) => Boolean)(a:String, b:String) = {
+if(a1(a,b)) a else b
+}
+def makeMin(c1: (String,String) => Boolean) = (a: String,b:String) => {
+if(c1(a,b)) a else b
+}
+
+Step3
+1.max(List("Hello","Goodbye","Good day"),(_.length<_.length))
+2.Type Mismatch
+3.It returns Hello
