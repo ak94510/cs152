@@ -1,0 +1,128 @@
+[info] Loading settings from plugins.sbt ...
+[info] Loading project definition from /tmp/hw4/project
+[info] Updating ProjectRef(uri("file:/tmp/hw4/project/"), "hw4-build")...
+[info] Done updating.
+[info] Compiling 1 Scala source to /tmp/hw4/project/target/scala-2.12/sbt-1.0/classes ...
+[info] Done compiling.
+[info] Loading settings from build.sbt ...
+[info] Set current project to hw4 (in build file:/tmp/hw4/)
+[info] Updating ...
+[info] Done updating.
+[info] Compiling 1 Scala source to /tmp/hw4/target/scala-2.12/classes ...
+[info] Done compiling.
+[info] Compiling 2 Scala sources to /tmp/hw4/target/scala-2.12/test-classes ...
+[info] Done compiling.
+[info] LexerSuite:
+[info] - Everything matched
+[info] - Everything ignored
+[info] - Everything reported
+[info] - A match failed
+[info] - C style comments
+[info] - Nested C style comments
+[info] PhoneSuite:
+[info] - cats
+[info] - cats again
+[info] - catsSpaces
+[info] - wordsForDigits
+[info] - wordsForDigits after filtering
+[info] - wordsForDigits again
+[info] - wordsForDigitsSequence
+[info] - wordsForDigitsSequence again
+[info] - grow
+[info] - grow again
+[info] - substrings
+[info] - phoneMnemonics
+[info] - HELLO WORLD
+[info] PhoneSuite *** ABORTED ***
+[info]   java.lang.OutOfMemoryError: GC overhead limit exceeded
+[info]   at java.lang.AbstractStringBuilder.<init>(AbstractStringBuilder.java:68)
+[info]   at java.lang.StringBuilder.<init>(StringBuilder.java:89)
+[info]   at hw4$.$anonfun$grow2$2(hw4.scala:72)
+[info]   at hw4$$$Lambda$5008/876345248.apply(Unknown Source)
+[info]   at scala.collection.immutable.List.map(List.scala:287)
+[info]   at hw4$.$anonfun$grow2$1(hw4.scala:72)
+[info]   at hw4$$$Lambda$4967/569661952.apply(Unknown Source)
+[info]   at hw4$.$anonfun$grow$2(hw4.scala:73)
+[info]   at hw4$$$Lambda$5004/2032436755.apply(Unknown Source)
+[info]   at scala.collection.immutable.List.flatMap(List.scala:335)
+[info]   ...
+[error] java.util.concurrent.ExecutionException: java.lang.OutOfMemoryError: GC overhead limit exceeded
+[error] 	at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+[error] 	at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+[error] 	at sbt.ConcurrentRestrictions$$anon$4.take(ConcurrentRestrictions.scala:207)
+[error] 	at sbt.Execute.next$1(Execute.scala:104)
+[error] 	at sbt.Execute.processAll(Execute.scala:107)
+[error] 	at sbt.Execute.runKeep(Execute.scala:84)
+[error] 	at sbt.EvaluateTask$.liftedTree1$1(EvaluateTask.scala:387)
+[error] 	at sbt.EvaluateTask$.run$1(EvaluateTask.scala:386)
+[error] 	at sbt.EvaluateTask$.runTask(EvaluateTask.scala:405)
+[error] 	at sbt.internal.Aggregation$.$anonfun$timedRun$4(Aggregation.scala:100)
+[error] 	at sbt.EvaluateTask$.withStreams(EvaluateTask.scala:331)
+[error] 	at sbt.internal.Aggregation$.timedRun(Aggregation.scala:98)
+[error] 	at sbt.internal.Aggregation$.runTasks(Aggregation.scala:111)
+[error] 	at sbt.internal.Aggregation$.$anonfun$applyTasks$1(Aggregation.scala:68)
+[error] 	at sbt.Command$.$anonfun$applyEffect$2(Command.scala:130)
+[error] 	at sbt.internal.Aggregation$.$anonfun$evaluatingParser$11(Aggregation.scala:220)
+[error] 	at sbt.internal.Act$.$anonfun$actParser0$3(Act.scala:387)
+[error] 	at sbt.MainLoop$.processCommand(MainLoop.scala:153)
+[error] 	at sbt.MainLoop$.$anonfun$next$2(MainLoop.scala:136)
+[error] 	at sbt.State$$anon$1.runCmd$1(State.scala:242)
+[error] 	at sbt.State$$anon$1.process(State.scala:248)
+[error] 	at sbt.MainLoop$.$anonfun$next$1(MainLoop.scala:136)
+[error] 	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:16)
+[error] 	at sbt.MainLoop$.next(MainLoop.scala:136)
+[error] 	at sbt.MainLoop$.run(MainLoop.scala:129)
+[error] 	at sbt.MainLoop$.$anonfun$runWithNewLog$1(MainLoop.scala:107)
+[error] 	at sbt.io.Using.apply(Using.scala:22)
+[error] 	at sbt.MainLoop$.runWithNewLog(MainLoop.scala:101)
+[error] 	at sbt.MainLoop$.runAndClearLast(MainLoop.scala:57)
+[error] 	at sbt.MainLoop$.runLoggedLoop(MainLoop.scala:42)
+[error] 	at sbt.MainLoop$.runLogged(MainLoop.scala:34)
+[error] 	at sbt.StandardMain$.runManaged(Main.scala:113)
+[error] 	at sbt.xMain.run(Main.scala:76)
+[error] 	at xsbt.boot.Launch$$anonfun$run$1.apply(Launch.scala:109)
+[error] 	at xsbt.boot.Launch$.withContextLoader(Launch.scala:128)
+[error] 	at xsbt.boot.Launch$.run(Launch.scala:109)
+[error] 	at xsbt.boot.Launch$$anonfun$apply$1.apply(Launch.scala:35)
+[error] 	at xsbt.boot.Launch$.launch(Launch.scala:117)
+[error] 	at xsbt.boot.Launch$.apply(Launch.scala:18)
+[error] 	at xsbt.boot.Boot$.runImpl(Boot.scala:41)
+[error] 	at xsbt.boot.Boot$.main(Boot.scala:17)
+[error] 	at xsbt.boot.Boot.main(Boot.scala)
+[error] Caused by: java.lang.OutOfMemoryError: GC overhead limit exceeded
+[error] 	at java.lang.AbstractStringBuilder.<init>(AbstractStringBuilder.java:68)
+[error] 	at java.lang.StringBuilder.<init>(StringBuilder.java:89)
+[error] 	at hw4$.$anonfun$grow2$2(hw4.scala:72)
+[error] 	at hw4$$$Lambda$5008/876345248.apply(Unknown Source)
+[error] 	at scala.collection.immutable.List.map(List.scala:287)
+[error] 	at hw4$.$anonfun$grow2$1(hw4.scala:72)
+[error] 	at hw4$$$Lambda$4967/569661952.apply(Unknown Source)
+[error] 	at hw4$.$anonfun$grow$2(hw4.scala:73)
+[error] 	at hw4$$$Lambda$5004/2032436755.apply(Unknown Source)
+[error] 	at scala.collection.immutable.List.flatMap(List.scala:335)
+[error] 	at hw4$.$anonfun$grow$1(hw4.scala:73)
+[error] 	at hw4$$$Lambda$4968/1095743226.apply(Unknown Source)
+[error] 	at hw4$.$anonfun$substrings$2(hw4.scala:74)
+[error] 	at hw4$$$Lambda$5010/209871862.apply(Unknown Source)
+[error] 	at scala.collection.immutable.List.$anonfun$foldRight$1(List.scala:405)
+[error] 	at scala.collection.immutable.List.foldRight(List.scala:86)
+[error] 	at hw4$.$anonfun$substrings$1(hw4.scala:74)
+[error] 	at hw4$$$Lambda$4969/1215485267.apply(Unknown Source)
+[error] 	at hw4$.$anonfun$phoneMnemonics$1(hw4.scala:75)
+[error] 	at hw4$$$Lambda$4970/2009226789.apply(Unknown Source)
+[error] 	at PhoneSuite.$anonfun$new$14(PhoneSuite.scala:64)
+[error] 	at PhoneSuite$$Lambda$4890/2062307314.apply(Unknown Source)
+[error] 	at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+[error] 	at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
+[error] 	at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+[error] 	at org.scalatest.Transformer.apply(Transformer.scala:22)
+[error] 	at org.scalatest.Transformer.apply(Transformer.scala:20)
+[error] 	at org.scalatest.FunSuiteLike$$anon$1.apply(FunSuiteLike.scala:186)
+[error] 	at org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
+[error] 	at org.scalatest.TestSuite.withFixture$(TestSuite.scala:195)
+[error] 	at org.scalatest.FunSuite.withFixture(FunSuite.scala:1560)
+[error] 	at org.scalatest.FunSuiteLike.invokeWithFixture$1(FunSuiteLike.scala:184)
+[error] java.util.concurrent.ExecutionException: java.lang.OutOfMemoryError: GC overhead limit exceeded
+[error] Use 'last' for the full log.
+
+Total Points : 19
