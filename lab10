@@ -1,0 +1,37 @@
+Addison Kauzer(Scribe) / Eric Scaramuzzo(Driver)
+Step1
+1.No
+-Well-Formedness Constraint: No < in Attribute Values
+2.NO
+-Validity Constraint: Attribute Value Type
+3.Yes
+-Validity Constraint: Attribute Value Type
+
+Step2
+1.
+class SimpleLanguageParser extends JavaTokenParsers {
+  def expr: Parser[Any] = "if" ~ "(" ~ wholeNumber ~ ")" ~ expr ~ opt("else" ~ expr) | wholeNumber
+}
+val parser = new SimpleLanguageParser
+val result = parser.parseAll(parser.expr, "if (1) if (2) 3 else 4")
+print(result.get)
+(((((if~()~1)~))~(((((if~()~2)~))~3)~Some((else~4))))~None)res0: Unit = ()
+
+2.
+class Expr
+case class IfExpr(cond : Number, pos : Expr, neg : Expr) extends Expr
+case class IfExpr1(cond : Number, pos : Expr) extends Expr
+case class Number(value : String) extends Expr
+
+class SimpleLanguageParser extends JavaTokenParsers {
+  def expr: Parser[Expr] = ("if" ~ "(") -> (number <- ")") ~ expr ~ opt("else" -> expr) ^^ {
+    case n ~ e ~ None => IfExpr1(n, e)
+    case n ~ e ~ Some(f) => IfExpr(n, e, f)
+  } | number
+  def number: Parser[Number] = wholeNumber ^^ { Number(_) }
+}
+val parser = new SimpleLanguageParser
+val result = parser.parseAll(parser.expr, "if (1) if (2) 3 else 4")
+print(result.get)
+
+3.No

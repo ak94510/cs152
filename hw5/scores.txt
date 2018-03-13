@@ -1,0 +1,19 @@
+[info] Loading settings from plugins.sbt ...
+[info] Loading project definition from /tmp/hw5/project
+[info] Updating {file:/tmp/hw5/project/}hw5-build...
+[info] Done updating.
+[info] Compiling 1 Scala source to /tmp/hw5/project/target/scala-2.12/sbt-1.0/classes ...
+[info] Done compiling.
+[info] Loading settings from build.sbt ...
+[info] Set current project to hw5 (in build file:/tmp/hw5/)
+[info] Updating {file:/tmp/hw5/}root...
+[info] Done updating.
+[info] Compiling 3 Scala sources to /tmp/hw5/target/scala-2.12/classes ...
+[error] /tmp/hw5/src/main/scala/hw5part3.scala:16:4: '}' expected but eof found.
+[error]   }
+[error]    ^
+[error] one error found
+[error] (compile:compileIncremental) Compilation failed
+[error] Total time: 1 s, completed Mar 11, 2018 11:51:52 PM
+
+Total Points : 0
