@@ -1,0 +1,4 @@
+def mod = { x,y => x - (y* (x/y))};
+def numbercounter = { x => if(x-10) 10 * numbercounter(x/10) else 1};
+def reverse = {x => if(x) mod(x,10) * numbercounter(x) + reverse(x/10) else 0};
+reverse(1729)
