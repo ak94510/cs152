@@ -1,0 +1,5 @@
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\theka\OneDrive\Documents\!ComputerScience\cs152\hw7\src\main\scala\SL1.scala:49:80: match may not be exhaustive.[0m
+[0m[[0m[33mwarn[0m] [0m[0mIt would fail on the following input: ~(_, (x: Object forSome x not in ("Nil", Expr)))[0m
+[0m[[0m[33mwarn[0m] [0m[0m  def cons: Parser[Expr] = (factor <~ "::") ~ (valOrFuncall | "Nil" | cons) ^^ {[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                               ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
