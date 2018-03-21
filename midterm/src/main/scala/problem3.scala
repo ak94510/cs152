@@ -1,6 +1,6 @@
 object problem3 extends App {
    def allCombinations(a: List[String], b: List[String]) = {
-      a.flatMap(x => b.map(y => x + "," +y))
+      a.flatMap(x => b.map(y => x + "," + y))
    }
      
      
