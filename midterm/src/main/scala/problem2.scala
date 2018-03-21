@@ -1,7 +1,7 @@
 object problem2 extends App {
   def pairs(lst: List[Int]) = {
     val seed: (List[(Int, Int)], Option[Int]) = (Nil, None)
-    val foldResult = ...
+    val foldResult = lst.foldLeft(seed)((x,y) => )
     foldResult._1
   }
   
