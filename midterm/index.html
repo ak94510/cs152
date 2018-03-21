@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <meta content='text/html; charset=utf-8' http-equiv='content-type'/> 
+    <title>Green Sheet</title> 
+    <link href='styles.css' rel='stylesheet' type='text/css'/> 
+  </head>
+  <body><h1>San Jose State University | CS 152 Section 3 | Spring 2018</h1>
+    <h2>Midterm Exam</h2>
+    <h3>Exam Rules</h3>
+    <ul><li>You may put any files that you like on your laptop, including the slides, the Scala API, and your and my homework and lab solutions.</li>
+      <li>You may NOT use the Internet for anything during the exam other than accessing your Git repo. </li>
+      <li>You may NOT communicate with anyone other than the exam proctor.</li>
+      <li>Immediately before the exam, run <code>git pull</code> to get the starter file into your repo.</li>
+      <li>Do all your exam work in the folder called <code>midterm</code> in your repo.</li>
+      <li>Put all your work into the files <code>problem1.scala</code>, <code>problem2.scala</code>, and so on, inside the <code>src/main/scala</code> directory.</li>
+      <li>You <b>must</b> run git commit every 10 minutes.</li>
+      <li>When the exam is over, run git push to push your repo.</li>
+      <li>The exam is 70 minutes long.</li>
+    </ul>
+    <h3>Exam Problems</h3>
+
+    <ol><li>Write a recursive Scala function <code>pairs</code> that receives a <code>List[Int]</code> and returns a <code>List[(Int, Int)]</code>, pairing adjacent elements. If the argument list has odd length, do not use the last element. For example,
+        <pre>pairs(List(1, 2, 3, 4, 5))
+</pre> returns
+        <pre>List((1, 2), (3, 4))
+</pre>
+        Submit a file <code>problem1.scala</code>
+      </li>
+      <li>Repeat the preceding exercise, but now use a left fold. This is a bit tricky because the fold operation (which you need to design) only sees one new element at a time. Use as a seed value a tuple <code>(<var>partial result list</var>, <var>previous value</var>)</code>, where the <var>previous</var> value is an <code>Option[Int]</code> that is either <code>None</code> or <code>Some(x)</code>, where <code>x</code> is the previous even value that you weren't yet able to pair up. (Or, if you don't want to use an <code>Option</code>, you can add a <code>Boolean</code> value to the tuple.) Your operator should take in the next list value and either append a completed pair to the list, or update the previous value. Submit <code>problem2.scala</code> with your function and a comment showing the fold diagram in ASCII art.</li>
+      <li>Given two lists of strings, produce a list of strings of all combinations of the first and second, separated by commas. Use <code>map</code>/<code>flatMap</code>. For example,
+        <pre>allCombinations(List("Hello", "Goodbye"), List("World", "Pluto", "San José"))</pre> yields
+        <pre>List("Hello,World", "Hello,Pluto", "Hello,San José", "Goodbye,World", "Goodbye,Pluto", "Goodbye,San José")
+</pre></li>
+      <li>Enhance the expression parser so that it can handle <code>^</code> as a “raise to a power” operator. Raising to a power binds more strongly than multiplication/division and is right-associative. For example, 4^2^3 = 4^(2^3) = 65536.</li>
+      <li>Enhance SL1 so that it can use the dot notation for <code>head</code>, <code>tail</code>, and <code>isEmpty</code>, instead of using functional notation as in homework 7. <br/> We can no longer parse them as <code>Funcall</code>. Instead, parse them as
+        <pre>case class MethodCall(e: Expr, name: String) extends Expr 
+</pre> Make <code>.</code> bind stronger than <code>::</code>. To evaluate a <code>MethodCall(e, name)</code>:
+        <ul><li>evaluate <code>e</code> and cast to <code>List[Any]</code></li>
+          <li>lookup <code>name</code> and cast to <code>ListOp</code></li>
+          <li>Apply the function <code>f</code> in the <code>ListOp</code> to the value of <code>e</code></li>
+        </ul>
+ </li>
+    </ol>
+  </body>
+</html>
