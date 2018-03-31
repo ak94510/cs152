@@ -1,0 +1,42 @@
+Problem 1
+
+Defines recursive helper (max. 2): 0
+Calls recursive helper (max. 2):
+Base case (max. 2):
+Even length (max. 2):
+Odd length (max. 2):
+
+No recursive helper
+
+Problem 2
+
+Fold call (max. 3): 3
+Fold function even case (max. 2): 2
+Fold function odd case (max. 2): 2
+Fold diagram (max. 3): 0
+
+Problem 3
+
+Flatmap, then map (max. 3):5
+Combines elements correctly (max. 2): 
+
+Problem 4
+
+Parses ^ (max. 2):2
+Evaluates ^ (max. 2):2
+Correct precedence (max. 3):3
+Right associative (max. 3): 0
+
+Problem 5
+
+. binds stronger than ::  (max. 2): 2
+. parsed as MethodCall (max. 2):2
+Chained . supported  (max. 2): 0
+MethodCall evaluated in correct location (max. 2): 2
+MethodCall evaluated as instructed  (max. 2): 1
+
+You need to cast since you don't know that result is a list
+
+
+
+26 C+
