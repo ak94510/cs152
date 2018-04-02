@@ -2,6 +2,7 @@ object hw5part2{
   abstract class Expr[T] {
     def eval(symbols: Map[String, T]): T
   }
+  def eval[T](d: Def[T], symbolTable: Map[String, T]) = symbolTable + (d.name -> d.expr.eval(symbolTable))
   case class Def[T](name: String,expr: Expr[T])
 
   class Op[T](function: Seq[T] => T, args: Expr[T]*) extends Expr[T] {

@@ -4,7 +4,7 @@
 		module="hw5-build"
 		revision="0.1.0-SNAPSHOT"
 		status="integration"
-		publication="20180306025806"
+		publication="20180402154226"
 		e:sbtVersion="1.0" e:scalaVersion="2.12"
 	>
 		<description>

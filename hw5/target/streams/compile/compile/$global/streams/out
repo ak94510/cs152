@@ -1,0 +1,58 @@
+[0m[[0m[31merror[0m] [0m[0mC:\Users\theka\OneDrive\Documents\!ComputerScience\cs152\hw5\src\main\scala\hw5part3.scala:1:19: object parsing is not a member of package util[0m
+[0m[[0m[31merror[0m] [0m[0mimport scala.util.parsing.combinator._[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\theka\OneDrive\Documents\!ComputerScience\cs152\hw5\src\main\scala\hw5part3.scala:4:38: not found: type JavaTokenParsers[0m
+[0m[[0m[31merror[0m] [0m[0m  class SimpleLanguageParser extends JavaTokenParsers {[0m
+[0m[[0m[31merror[0m] [0m[0m                                     ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\theka\OneDrive\Documents\!ComputerScience\cs152\hw5\src\main\scala\hw5part3.scala:5:15: not found: type Parser[0m
+[0m[[0m[31merror[0m] [0m[0m    def Expr: Parser[Any] = Term ~ opt(("+" | "-") ~ Expr)[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\theka\OneDrive\Documents\!ComputerScience\cs152\hw5\src\main\scala\hw5part3.scala:7:15: not found: type Parser[0m
+[0m[[0m[31merror[0m] [0m[0m    def Term: Parser[Any] = Factored ~ opt(("*" | "/") ~ Term)[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\theka\OneDrive\Documents\!ComputerScience\cs152\hw5\src\main\scala\hw5part3.scala:9:19: not found: type Parser[0m
+[0m[[0m[31merror[0m] [0m[0m    def Factored: Parser[Any] = wholeNumber | ident | "(" ~ Expr ~ ")"[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\theka\OneDrive\Documents\!ComputerScience\cs152\hw5\src\main\scala\hw5part3.scala:9:33: not found: value wholeNumber[0m
+[0m[[0m[31merror[0m] [0m[0m    def Factored: Parser[Any] = wholeNumber | ident | "(" ~ Expr ~ ")"[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\theka\OneDrive\Documents\!ComputerScience\cs152\hw5\src\main\scala\hw5part3.scala:9:47: not found: value ident[0m
+[0m[[0m[31merror[0m] [0m[0m    def Factored: Parser[Any] = wholeNumber | ident | "(" ~ Expr ~ ")"[0m
+[0m[[0m[31merror[0m] [0m[0m                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\theka\OneDrive\Documents\!ComputerScience\cs152\hw5\src\main\scala\hw5part3.scala:9:59: value ~ is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m    def Factored: Parser[Any] = wholeNumber | ident | "(" ~ Expr ~ ")"[0m
+[0m[[0m[31merror[0m] [0m[0m                                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\theka\OneDrive\Documents\!ComputerScience\cs152\hw5\src\main\scala\hw5part3.scala:12:14: not found: value ~[0m
+[0m[[0m[31merror[0m] [0m[0m      case a ~ Some("+" ~ b) => Eval(a, symbols) + Eval(b, symbols)[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\theka\OneDrive\Documents\!ComputerScience\cs152\hw5\src\main\scala\hw5part3.scala:12:25: not found: value ~[0m
+[0m[[0m[31merror[0m] [0m[0m      case a ~ Some("+" ~ b) => Eval(a, symbols) + Eval(b, symbols)[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\theka\OneDrive\Documents\!ComputerScience\cs152\hw5\src\main\scala\hw5part3.scala:13:14: not found: value ~[0m
+[0m[[0m[31merror[0m] [0m[0m      case a ~ Some("-" ~ b) => Eval(a, symbols) - Eval(b, symbols)[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\theka\OneDrive\Documents\!ComputerScience\cs152\hw5\src\main\scala\hw5part3.scala:13:25: not found: value ~[0m
+[0m[[0m[31merror[0m] [0m[0m      case a ~ Some("-" ~ b) => Eval(a, symbols) - Eval(b, symbols)[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\theka\OneDrive\Documents\!ComputerScience\cs152\hw5\src\main\scala\hw5part3.scala:14:14: not found: value ~[0m
+[0m[[0m[31merror[0m] [0m[0m      case a ~ Some("*" ~ b) => Eval(a, symbols) * Eval(b, symbols)[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\theka\OneDrive\Documents\!ComputerScience\cs152\hw5\src\main\scala\hw5part3.scala:14:25: not found: value ~[0m
+[0m[[0m[31merror[0m] [0m[0m      case a ~ Some("*" ~ b) => Eval(a, symbols) * Eval(b, symbols)[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\theka\OneDrive\Documents\!ComputerScience\cs152\hw5\src\main\scala\hw5part3.scala:15:14: not found: value ~[0m
+[0m[[0m[31merror[0m] [0m[0m      case a ~ Some("/" ~ b) => Eval(a, symbols) / Eval(b, symbols)[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\theka\OneDrive\Documents\!ComputerScience\cs152\hw5\src\main\scala\hw5part3.scala:15:25: not found: value ~[0m
+[0m[[0m[31merror[0m] [0m[0m      case a ~ Some("/" ~ b) => Eval(a, symbols) / Eval(b, symbols)[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\theka\OneDrive\Documents\!ComputerScience\cs152\hw5\src\main\scala\hw5part3.scala:16:14: not found: value ~[0m
+[0m[[0m[31merror[0m] [0m[0m      case a ~ None => Eval(a, symbols)[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\theka\OneDrive\Documents\!ComputerScience\cs152\hw5\src\main\scala\hw5part3.scala:24:20: not found: value ~[0m
+[0m[[0m[31merror[0m] [0m[0m      case "(" ~ a ~ ")" => Eval(a, symbols)[0m
+[0m[[0m[31merror[0m] [0m[0m                   ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\theka\OneDrive\Documents\!ComputerScience\cs152\hw5\src\main\scala\hw5part3.scala:24:16: not found: value ~[0m
+[0m[[0m[31merror[0m] [0m[0m      case "(" ~ a ~ ")" => Eval(a, symbols)[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0m19 errors found[0m
