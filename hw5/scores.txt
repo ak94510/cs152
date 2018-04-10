@@ -16,4 +16,43 @@
 [error] (compile:compileIncremental) Compilation failed
 [error] Total time: 1 s, completed Mar 11, 2018 11:51:52 PM
 
-Total Points : 0
+
+===
+
+Regraded after replacing
+
+ //def Rand: Int = new scala.util.Random(42).nextInt()
+  def Rand = Const(42)
+
+[info] Done compiling.
+[info] ParseSuite:
+[info] - No variable
+[info] - One variable
+[info] - One variable twice
+[info] - Two variables
+[info] - Two variables twice
+[info] DefSuite:
+[info] - Variable
+[info] - Expression with variable
+[info] - Expression with multiple variables
+[info] - Expression with multiple occurrences of the same variable
+[info] - Definition
+[info] - Shadowing
+[info] OpSuite:
+[info] - simple expression
+[info] - input expression
+[info] - nested expression
+[info] - random expression *** FAILED ***
+[info]   1029516620 did not equal 1806 (OpSuite.scala:24)
+[info] - string op expression
+[info] Run completed in 390 milliseconds.
+[info] Total number of tests run: 16
+[info] Suites: completed 3, aborted 0
+[info] Tests: succeeded 15, failed 1, canceled 0, ignored 0, pending 0
+[info] *** 1 TEST FAILED ***
+[error] Failed tests:
+[error] 	OpSuite
+
+
+
+Total Points : 15
