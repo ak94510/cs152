@@ -1,0 +1,7 @@
+Addison Kauzer(Scribe) / Eric Scaramuzzo (Driver)
+1
+list of cards flipped
+list of cards remaining
+list of integers representing the number of cards for each value
+2
+value([X|Xs], S, N) :- P is X * S, S1 is S + 1, value(Xs, S1, N1), N is P + N1.
