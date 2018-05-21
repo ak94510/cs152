@@ -1,0 +1,10 @@
+When this program is parsed, what object does the parser return for even and odd?
+
+
+What objects are produced when these objects from the parse tree are evaluated? Describe the symbol tables exactly.
+
+
+Why does this version work when the first version didn't?
+
+
+Can you define even with a val instead of a def? Can you define odd with a val instead of a def? Why or why not?
