@@ -1,10 +1,19 @@
 When this program is parsed, what object does the parser return for even and odd?
+even: 
+Defdef(even,Function(List(x),Block(List(Defdef(odd,Function(List(x),Block(List(),IfExpr(Operator(Variable(x),Number(1),SL1Parser$$Lambda$96/1833638914@402a079c),Block(List(),Funcall(Variable(even),List(Operator(Variable(x),Number(1),SL1Parser$$Lambda$96/1833638914@402a079c)))),Block(List(),IfExpr(Variable(x),Block(List(),Number(1)),Block(List(),Number(0))))))))),IfExpr(Operator(Variable(x),Number(1),SL1Parser$$Lambda$96/1833638914@402a079c),Block(List(),Funcall(Variable(odd),List(Operator(Variable(x),Number(1),SL1Parser$$Lambda$96/1833638914@402a079c)))),Block(List(),IfExpr(Variable(x),Block(List(),Number(0)),Block(List(),Number(1))))))))),Funcall(Variable(even),List(Number(42))))
 
+odd: the portion of even that defines odd 
+Defdef(odd,Function(List(x),Block(List(),IfExpr(Operator(Variable(x),Number(1),SL1Parser$$Lambda$96/1833638914@402a079c),Block(List(),Funcall(Variable(even),List(Operator(Variable(x),Number(1),SL1Parser$$Lambda$96/1833638914@402a079c)))),Block(List(),IfExpr(Variable(x),Block(List(),Number(1)),Block(List(),Number(0))))))))),IfExpr(Operator(Variable(x),Number(1),SL1Parser$$Lambda$96/1833638914@402a079c),Block(List(),Funcall(Variable(odd),List(Operator(Variable(x),Number(1),SL1Parser$$Lambda$96/1833638914@402a079c)))),Block(List(),IfExpr(Variable(x),Block(List(),Number(0)),Block(List(),Number(1)))))))))
 
 What objects are produced when these objects from the parse tree are evaluated? Describe the symbol tables exactly.
 
+(odd,Closure(List(x),Block(List(),IfExpr(Operator(Variable(x),Number(1),SL1Parser$$Lambda$96/1833638914@1a968a59),Block(List(),Funcall(Variable(even),List(Operator(Variable(x),Number(1),SL1Parser$$Lambda$96/1833638914@1a968a59)))),Block(List(),IfExpr(Variable(x),Block(List(),Number(1)),Block(List(),Number(0))))))))
+
+(even,Closure(List(x),Block(List(Defdef(odd,Function(List(x),Block(List(),IfExpr(Operator(Variable(x),Number(1),SL1Parser$$Lambda$96/1833638914@1a968a59),Block(List(),Funcall(Variable(even),List(Operator(Variable(x),Number(1),SL1Parser$$Lambda$96/1833638914@1a968a59))))
 
 Why does this version work when the first version didn't?
-
+In the first version, even and odd were dependent upon eachother to have a return value. When even was defined, odd was added to the symbol table. Then when odd was defined that value in the symbol table needed
+to be mutated. In the second version the program defines the value in the symbol table for odd while even is being defined.
 
 Can you define even with a val instead of a def? Can you define odd with a val instead of a def? Why or why not?
+Both must be defined as def since they are dependent on eachothers values in the symbol table.
