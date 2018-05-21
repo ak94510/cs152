@@ -60,6 +60,12 @@ class SL3Parser extends JavaTokenParsers {
       case (x, op ~ y) => Operator(x, y, op)
     }
   }
+  def power: Parser[Expr] = (term ~ rep(("^") ~ term)) ^^ {
+    case a ~ lst =>  (a /: lst) {
+      case (x, op ~ y) => Operator(x, y, op)
+    }
+  }
+
   
   def factor: Parser[Expr] = wholeNumber ^^ { x : String => Number(x.toInt) } |
     varOrFuncall | "(" ~> expr <~ ")"
