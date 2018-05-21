@@ -1,5 +1,7 @@
-shift(X, E, Y) :- ... .
+shiftOnce([H|T],[H2|T2]) :- last(T,H2), subtract([H|T], [H2], T2).
 
-normalizeCycle(Cycle, X) :- ... .
+%shift(X, E, Y) :- 
 
-normalize(Cycles, X) :- ... .
+%normalizeCycle(Cycle, X) :- ... .
+
+%normalize(Cycles, X) :- ... .
