@@ -1,0 +1,24 @@
+
+
+1. normalizeCycle (max 5 points): 5
+normalize with map and sort (max 5 points): 5
+
+2. normalizeCycle (max 5 points):0
+normalize (max 5 points):0
+No useful work.
+
+3. When this program is parsed, what object does the parser return for even and odd? (max. 2 points): 2
+What objects are produced when these objects from the parse tree are evaluated? Describe the symbol tables exactly. (max. 3 points): 3
+Why does this version work when the first version didn't? (max. 3 points): 3
+Can you define even with a val instead of a def? Can you define odd with a val instead of a def? Why or why not? (max 2 points): 0
+
+4. Variance (max 3 points): 3
+Get implementation (max 3 points):2 
+What if > 1 associated element
+Put implementation (max 4 points):4
+
+5. Parses ^ (max 3 points): 3
+Correct precedence (max 4 points): 0
+Generates call to Math.pow, static, Double param/return (max 4 points): 0
+Casts correct (max 4 points): 0
+
